@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--<app asp-prerender-module="ClientApp/dist/main-server">Loading...</app>-->
+<!--To overcome the issue "ReferenceError: window is not defined"-->   
+<app asp-ng2-prerender-module="ClientApp/dist/main-server">Loading...</app>   
+<!--ej theme reference-->   
+<link href="~/dist/ej/web/material/ej.web.all.min.css" rel="stylesheet" asp-append-version="true">  
+
+<script src="~/dist/vendor.js" asp-append-version="true"></script>
+@section scripts {
+    <script src="~/dist/main-client.js" asp-append-version="true"></script>
+}
